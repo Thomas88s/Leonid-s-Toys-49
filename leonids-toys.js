@@ -41,3 +41,6 @@
     for (toy of toys) {
         console.log(`Name: ${toy.name}, Maker: ${toy.maker}, Price: $${toy.price}`)
     }
+    for (toy of toys) {
+        console.log(`We have ${toy.name}s from ${toy.maker} in stock. It's available for only $${toy.price}!`)
+    }
