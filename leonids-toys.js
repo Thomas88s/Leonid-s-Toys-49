@@ -49,3 +49,11 @@
         toy.price = Math.ceil(toy.price * .05 + toy.price).toFixed(2)
         console.log(`The ${toy.maker} ${toy.name} has increased in price, it cost ${toy.price} dollars.`) 
     }
+
+    const toyToFind = 3;
+
+    for (toy of toys) {
+        if (toy.id === toyToFind) {
+            console.log(`The item you are looking for is the ${toy.name} made by ${toy.maker}. It is priced at ${toy.price}.`)
+        }
+    }
