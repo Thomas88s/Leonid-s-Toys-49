@@ -48,4 +48,4 @@
     for (const toy of toys) {
         toy.price = Math.ceil(toy.price * .05 + toy.price).toFixed(2)
         console.log(`The ${toy.maker} ${toy.name} has increased in price, it cost ${toy.price} dollars.`) 
-    }
+    } 
