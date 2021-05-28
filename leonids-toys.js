@@ -21,7 +21,6 @@
 
    ]
     
-   
    const xbox = {
        id: 4,
        name: "X-Box: Series X",
@@ -57,3 +56,22 @@
             console.log(`The item you are looking for is the ${toy.name} made by ${toy.maker}. It is priced at ${toy.price}.`)
         }
     }
+
+    const addToyToInventory = (toyToAdd) => {
+        const lastIndex = toys.length -1
+        const currentLastToy = toys[lastIndex]
+        const maxId = currentLastToy.id
+        const idForNewToy = maxId + 1
+        toyToAdd.id = idForNewToy
+        toys.push(toyToAdd)
+    }
+
+    const catan = {
+        name: "Catan",
+        maker: "Catan Studio",
+        price: 41.27
+    }
+
+     addToyToInventory(catan)
+
+    console.log(toys)
