@@ -44,3 +44,8 @@
     for (toy of toys) {
         console.log(`We have ${toy.name}s from ${toy.maker} in stock. It's available for only $${toy.price}!`)
     }
+
+    for (const toy of toys) {
+        toy.price = Math.ceil(toy.price * .05 + toy.price).toFixed(2)
+        console.log(`The ${toy.maker} ${toy.name} has increased in price, it cost ${toy.price} dollars.`) 
+    }
