@@ -75,13 +75,18 @@
      addToyToInventory(catan)
 
     console.log(toys)
-
+    
+    
+    
+    
+    
     const removeProduct = (toyId) => {
-           for (toy of toys) {
+        for (toy of toys) {
             if (toyId === toy.id) {
-           
-               toys.splice(toyId, 1)
-          
+               
+               const indexToCut = toyId - 1
+               toys.splice(indexToCut, 1)
+               console.log(toyId)
                console.log(`Item: "${toy.name}", Id: "${toy.id}" has been removed.`)
                
               
@@ -128,4 +133,4 @@
     }
     }
     
-    sellPerryScope()
+    // sellPerryScope()
