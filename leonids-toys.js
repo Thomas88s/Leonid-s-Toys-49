@@ -21,14 +21,14 @@
 
    ]
     
-   const xbox = {
+ const xbox = {
        id: 4,
        name: "X-Box: Series X",
        maker: "Microsoft",
        price: 499.99
     }
     
-    const wagon = {
+ const wagon = {
         id: 5,
         name: "Radio Flyer Classic Red Wagon",
         maker: "Radio Flyer",
@@ -75,3 +75,57 @@
      addToyToInventory(catan)
 
     console.log(toys)
+
+    const removeProduct = (toyId) => {
+           for (toy of toys) {
+            if (toyId === toy.id) {
+           
+               toys.splice(toyId, 1)
+          
+               console.log(`Item: "${toy.name}", Id: "${toy.id}" has been removed.`)
+               
+              
+
+            }
+           }
+          
+               
+     }
+     
+        
+    
+    removeProduct(4)
+    
+    console.log(toys)
+    
+
+    const currentInventory = [
+        "Muscle Man",
+        "Dora the Scientist",
+        "Princess Sparkles",
+        "Perry Scope",
+        "Explorer Backpack",
+        "Space Scout Suit",
+        "Geology Mineral Dig Kit",
+        "Perry Scope"
+    ]
+    
+    const sellPerryScope = () => {
+    
+        for (const toy of currentInventory) {
+            let availableForPurchase = false
+    
+            if (toy === "Perry Scope") {
+                availableForPurchase = true
+            }
+        
+    
+        if (availableForPurchase) {
+            console.log("Enjoy your new Perry Scope")
+        } else {
+            console.log("Beat it loser!")
+        }
+    }
+    }
+    
+    sellPerryScope()
