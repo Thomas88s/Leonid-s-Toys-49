@@ -83,10 +83,10 @@
     const removeProduct = (toyId) => {
         for (toy of toys) {
             if (toyId === toy.id) {
-               
-               const indexToCut = toyId - 1
-               toys.splice(indexToCut, 1)
-               console.log(toyId)
+              const isToyIndex = (toyObj) => toyObj.id === toyId;
+            
+              toys.splice(toys.findIndex(isToyIndex), 1); 
+              console.log(toys)
                console.log(`Item: "${toy.name}", Id: "${toy.id}" has been removed.`)
                
               
